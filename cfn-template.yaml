@@ -36,7 +36,7 @@ Resources:
       InstanceType: !Ref instanceType
       KeyName: !Ref keyPair
       SecurityGroupIds: 
-        - !Ref ekremSecGrp #!GetAtt ekremSecGrp.GroupId
+        - !Ref ekremSecGrp #  yada !GetAtt ekremSecGrp.GroupId
       Tags: 
         - Key: Name
           Value: !Sub ${AWS::StackName}
