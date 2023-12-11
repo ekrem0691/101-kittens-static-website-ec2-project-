@@ -66,3 +66,9 @@ Resources:
           ToPort: 80
           CidrIp: 0.0.0.0/0
 
+Outputs:
+  webSiteURL:
+    Description: URL of website
+    Value: !Sub
+      - http://${PublicDNS}
+      - PublicDNS: !GetAtt myWebServer.PublicDnsName
